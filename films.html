@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Movies</title>
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap&subset=devanagari,latin-ext"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+      integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+      crossorigin="anonymous"
+    />
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link href="css/owfont-regular.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="css/films.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <header><span>Movies</span></header>
+      <p></p>
+      <main class="main">
+        <div class="form-wrap">
+          <form action="" class="form" id="form">
+            <div class="input-wrap">
+              <input
+                type="text"
+                id="movieTitle"
+                value=""
+                placeholder="input movie here"
+              />
+              <select name="movieType" id="movieType">
+                <option value="movie">movie</option>
+                <option value="series">series</option>
+                <option value="episode">episode</option>
+              </select>
+            </div>
+          </form>
+          <button class="button" onclick="getFirstPage()">Search</button>
+        </div>
+        <ol></ol>
+      </main>
+      <footer class="pagination">
+        <button class="button " id="prevPage" onclick="getPrevPage()">
+          Prev page
+        </button>
+        <div class="pageNumber"></div>
+        <button class="button" onclick="getNextPage()">
+          Next page
+        </button>
+      </footer>
+      <button class="clean" onclick="localStorage.clear()">
+        Clean Storage
+      </button>
+      <button class="getFav" onclick="getFavorites()">Favorites</button>
+      <div class="favorites"></div>
+      <div class="detailsData"></div>
+
+      <script src="js/films.js"></script>
+    </div>
+  </body>
+</html>
